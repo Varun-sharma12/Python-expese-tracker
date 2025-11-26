@@ -1,5 +1,12 @@
-{
-    "title": " Lunch",
-    "amount": 90.0,
-    "category": " Food"
-}
+[
+    {
+        "title": " lunch",
+        "amount": 40.0,
+        "category": " Food"
+    },
+    {
+        "title": " Vrindavan",
+        "amount": 500.0,
+        "category": " Travel"
+    }
+]

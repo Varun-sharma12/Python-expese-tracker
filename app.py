@@ -5,9 +5,9 @@ def load_expenses():
   with open(DATA_FILE,"r") as f:
     return json.load(f)
 
-def save_expenses(expense):
-  with open (DATA_FILE,"w") as f:
-    json.dump(expense, f, indent=4)
+def save_expenses(expenses):
+    with open(DATA_FILE, "w") as f:
+        json.dump(expenses, f, indent=4)
 
 def add_expense():
 
@@ -32,13 +32,22 @@ def add_expense():
   }
 
   expenses.append(expense)
-  save_expenses(expense)
+  save_expenses(expenses)
   print("Expenses Added successfully")
 
 def view_expense():
   with open(DATA_FILE,"r") as f:
-     data = f.read()
-    #  print(f"{data.title}--{data.amount}")
+      data = json.load(f) 
+          if not data:
+        print("No expenses found.")
+        return
+
+    print("\n===== All Expenses =====")
+    for item in data:
+        print(f"{item['title']} -- {item['amount']} -- {item['category']}")
+  for item in data:            # loop through list
+    # each item is a dict
+    print(f"{item['title']}--{item['amount']} -- {item['category']}")
 
 def show_menu():
   print("\n============== Expense Manager===============")
