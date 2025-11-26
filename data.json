@@ -1,12 +1,12 @@
 [
     {
-        "title": " lunch",
-        "amount": 40.0,
-        "category": " Food"
+        "title": " Delhi",
+        "amount": 800.0,
+        "category": " Travel"
     },
     {
-        "title": " Vrindavan",
-        "amount": 500.0,
-        "category": " Travel"
+        "title": " Shoes",
+        "amount": 550.0,
+        "category": " Shopping"
     }
 ]
